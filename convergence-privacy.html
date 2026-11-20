@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convergence — Privacy Policy</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#555; --bg:#ffffff; --rule:#e5e5e5; --accent:#3b5bdb; }
+  @media (prefers-color-scheme: dark){
+    :root { --ink:#e8e8e8; --muted:#a5a5a5; --bg:#141414; --rule:#2a2a2a; --accent:#7a92ff; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width:44rem; margin:0 auto; padding:3rem 1.25rem 5rem; }
+  h1 { font-size:1.8rem; line-height:1.2; margin:0 0 .25rem; }
+  h2 { font-size:1.15rem; margin:2.2rem 0 .5rem; }
+  .eff { color:var(--muted); font-size:.9rem; margin:0 0 2rem; }
+  a { color:var(--accent); }
+  ul { padding-left:1.2rem; } li { margin:.3rem 0; }
+  hr { border:none; border-top:1px solid var(--rule); margin:2.5rem 0; }
+  .contact { background:color-mix(in srgb, var(--accent) 8%, transparent);
+    border:1px solid var(--rule); border-radius:10px; padding:1rem 1.25rem; }
+  footer { color:var(--muted); font-size:.85rem; margin-top:3rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Convergence — Privacy Policy</h1>
+  <p class="eff">Effective 19 November 2026 · Developer: Arx Laboratories</p>
+
+  <p>This policy explains how the Convergence app
+  (<code>com.arxlaboratories.convergence</code>) handles information.
+  Convergence is an app for couples: each partner answers questions privately
+  on their own phone, and the app shows where you agree once you have both
+  answered. Your answers live on your two phones. We run a relay that passes
+  encrypted messages between them, and we cannot read what they contain.</p>
+
+  <h2>What stays on your phones</h2>
+  <ul>
+    <li><strong>Your answers, predictions, check-ins and notes</strong> are stored
+      on your device, encrypted with a key protected by the Android Keystore.</li>
+    <li><strong>Pairing</strong> happens in person, by scanning a code on your
+      partner's phone. The two phones agree on keys that never leave them.</li>
+    <li><strong>Answers you keep private</strong> are used to compare with your
+      partner's and are never shown to them.</li>
+  </ul>
+
+  <h2>What our relay sees</h2>
+  <p>To move data between the two phones, each phone deposits messages at our
+  relay and collects the other's. Every message is end-to-end encrypted on the
+  phone before it is sent and padded to a fixed size, so the relay cannot read
+  it or tell one kind of message from another. The relay does see:</p>
+  <ul>
+    <li>a random identifier for your couple and one for each phone, and each
+      phone's public key, used to route messages and check which phone is
+      talking;</li>
+    <li>when a phone deposits or collects messages, and how many.</li>
+  </ul>
+  <p>Messages are deleted from the relay once the other phone has collected
+  them, and in any case after 30 days. The relay keeps no long-term copy and
+  does not store IP addresses. Connections reach it through Cloudflare, which
+  handles them under its own privacy policy.</p>
+
+  <h2>Backups</h2>
+  <p>If you turn on backup, the app saves an encrypted copy of your data to a
+  hidden app folder in <strong>your own Google Drive</strong>. Only this app can
+  open that folder, and the copy is encrypted with your recovery words before
+  it leaves your phone, so neither Google nor we can read it. We never receive
+  it. You can also save an encrypted copy as a file yourself. Ending the couple
+  deletes the Drive copy.</p>
+
+  <h2>Wishlists and the browser extension</h2>
+  <p>Wishlists sync between your two phones encrypted, like your answers. When
+  you share a shop's link to the app, your phone fetches that page itself to
+  read the item's name and price; the address goes only to that shop. The
+  optional Convergence browser extension reads a page only when you click it,
+  on your computer, and sends the item encrypted so that only your two phones
+  can open it. It cannot read your lists or anything else back, and either
+  phone can disconnect it.</p>
+
+  <h2>Google sign-in</h2>
+  <p>The app asks you to sign in with Google. The sign-in token is checked on
+  your phone and then discarded. We do not receive or store your name, email
+  address or Google account details.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>Camera</strong> — only to scan the pairing code. No images are
+      stored or sent.</li>
+    <li><strong>Notifications</strong> — reminders and partner activity. They
+      never contain your answers.</li>
+    <li><strong>Biometrics</strong> — to lock the app on your phone.</li>
+  </ul>
+
+  <h2>What we do not do</h2>
+  <ul>
+    <li>We do not sell or share your information.</li>
+    <li>We do not run analytics or advertising in the app.</li>
+    <li>We hold no key that could decrypt your answers, and there is no way for
+      us to give anyone access to them.</li>
+  </ul>
+
+  <h2 id="deleting-your-data">Deleting your data</h2>
+  <p>There is no account with us to delete. To remove your data, open the app,
+  tap <em>“Something has happened and I need this to stop”</em> at the bottom of
+  the home screen, and choose to end the couple. This deletes the couple's data from your phone and
+  ends the couple identity permanently. It also deletes the backup in your Google
+  Drive. Anything still waiting at the relay
+  expires within 30 days. Uninstalling the app also removes everything stored on
+  your phone. Your partner's phone keeps its own copy, which only they can
+  delete.</p>
+
+  <h2>Children</h2>
+  <p>Convergence is intended for adults (17+) and is not directed to
+  children.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this policy; the effective date above will change.</p>
+
+  <hr>
+  <h2>Contact</h2>
+  <div class="contact">
+    <p style="margin:0">Arx Laboratories<br>
+    <a href="mailto:support@arxlaboratories.com">support@arxlaboratories.com</a></p>
+  </div>
+  <footer>© 2026 Arx Laboratories. Convergence.</footer>
+</main>
+</body>
+</html>
